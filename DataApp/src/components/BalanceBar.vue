@@ -1,8 +1,8 @@
 <template>
-  <div class="flex sm:items-center justify-center w-full bg-gray-50 py-2.5 sm:px-3.5">
+  <div class="flex items-center justify-center w-full bg-gray-50 py-2.5 sm:px-3.5">
     <div class="bg-gray-200 py-1.5 px-2 rounded-md">
-      <div id="balanceHolder" class="flex justify-between sm:items-center md:justify-center">
-        <div class="flex items-center">
+      <div id="balanceHolder" class="flex justify-between items-center md:justify-center">
+        <div class="flex justify-center items-center">
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="" class="size-6">
               <path d="M4.5 3.75a3 3 0 0 0-3 3v.75h21v-.75a3 3 0 0 0-3-3h-15Z" />
@@ -19,10 +19,10 @@
           </div>
         </div>
 
-        <div class="sm:ml-0">
+        <div class="sm:ml-0 items-center justify-center">
           <a
             href="#"
-            class="flex items-center align-middle rounded-md bg-blue-600 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            class="flex items-center align-middle rounded-md bg-blue-600 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
           >
             <span>
               <PlusIcon class="h-6 align-middle" />
