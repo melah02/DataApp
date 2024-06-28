@@ -4,7 +4,7 @@
       <div id="balanceHolder" class="flex justify-between items-center md:justify-center">
         <div class="flex justify-center items-center">
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="" class="size-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0047AB" class="size-6">
               <path d="M4.5 3.75a3 3 0 0 0-3 3v.75h21v-.75a3 3 0 0 0-3-3h-15Z" />
               <path
                 fill-rule="evenodd"

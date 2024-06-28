@@ -1,15 +1,15 @@
 <template>
-  <div class="gap-6 flex justify-center">
+  <div class="flex justify-center">
     <div
-      class="flex justify-center bg-gray-100  shadow-xl  rounded-xl p-5 "
+      class="flex justify-center bg-gray-100 hover:bg-slate-300 shadow-xl  rounded-xl  p-2 "
     >
       <div class="flex flex-col">
         <slot name="heading"> </slot>
         <div class="">
-          <div class=" ">
+          <div class="">
             <slot name="data"></slot>
-            <slot name="date"></slot>
-          </div>
+            </div>
+          <slot class="" name="date"></slot>
         </div>
       </div>
       <div class="pl-4 text-gray-900">

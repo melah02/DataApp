@@ -118,27 +118,114 @@
     </DisclosurePanel>
   </Disclosure>
 
-  <div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-gray-800 h-[50vh] w-full">
-    <p class="flex mx-6 py-8">Hi Melah,<br />Purchase Data At Affordable Price.</p>
+  <div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-gray-800 h-[50vh]">
+    <p class="flex mx-6 py-8">Hi Melah,<br />Welcome to Marsh Data.</p>
     <BalanceBar></BalanceBar>
   </div>
-  <Card class="-my-20 text-gray-600">
+  <Card class="-my-16">
     <template #heading>
-      <h1 class="text-2xl">Buy Data</h1>
+      <h1 class="text-2xl text-blue-500"><strong>Stable Link</strong></h1>
     </template>
-    <template #data> data</template>
-    <template #date> date </template>
-    <template #analitics> data<WifiIcon></WifiIcon> </template>
+
+    <template #data> <div class="text-green-500 rounded-full">Active</div></template>
+    <template #date>
+      <div class="text-2xl text-blue-500">{{ day }} - {{ month }} - {{ date }}th</div>
+    </template>
+
+    <template #analitics> <WifiIcon class="h-16 w-16 text-blue-500"></WifiIcon> </template>
   </Card>
-  <div class="mt-20 bg-white">
+  <div class="mt-24 bg-white">
     <div>
-      <h1 class="text-gray-900 text-3xl">Products</h1>
+      <h1 class="text-gray-900 text-3xl mb-6"><strong>Products</strong></h1>
     </div>
-    <Card />
+    <div class="flex justify-center items-center ">
+      <!-- Airtime -->
+      <Card class="p-2">
+        <template #heading>
+          <h1 class="text-blue-500"><strong>Airtime</strong></h1>
+        </template>
+
+        <template #data> <div class="text-green-500 rounded-full">...</div></template>
+        <template #date>
+          <div class="text-blue-500"></div>
+        </template>
+
+        <template #analitics> <PhoneIcon class="h-3 w-3 text-blue-500"></PhoneIcon> </template>
+      </Card>
+      <!-- Data -->
+      <Card class="p-2">
+        <template #heading>
+          <h1 class="text-blue-500"><strong>Data</strong></h1>
+        </template>
+
+        <template #data> <div class="text-green-500 rounded-full">...</div></template>
+        <template #date>
+          <div class="text-blue-500"></div>
+        </template>
+
+        <template #analitics> <WifiIcon class="h-3 w-3 text-blue-500"></WifiIcon> </template>
+      </Card>
+      <!-- Electricity -->
+      <Card class="p-2">
+        <template #heading>
+          <h1 class="text-blue-500"><strong>Electricity</strong></h1>
+        </template>
+
+        <template #data> <div class="text-green-500 rounded-full">...</div></template>
+        <template #date>
+          <div class="text-blue-500"></div>
+        </template>
+
+        <template #analitics> <BoltIcon class="h-3 w-3 text-blue-500"></BoltIcon> </template>
+      </Card>
+    </div>
+    <div class="flex justify-center items-center ">
+      <!-- Data pin -->
+      <Card class="p-2">
+        <template #heading>
+          <h1 class="text-blue-500"><strong>Data pin</strong></h1>
+        </template>
+
+        <template #data> <div class="text-green-500 rounded-full">...</div></template>
+        <template #date>
+          <div class="text-blue-500"></div>
+        </template>
+
+        <template #analitics> <PhoneIcon class="h-3 w-3 text-blue-500"></PhoneIcon> </template>
+      </Card>
+      <!-- Exam Pin -->
+      <Card class="p-2">
+        <template #heading>
+          <h1 class="text-blue-500"><strong>Exam Pin</strong></h1>
+        </template>
+
+        <template #data> <div class="text-green-500 rounded-full">...</div></template>
+        <template #date>
+          <div class="text-blue-500"></div>
+        </template>
+
+        <template #analitics> <WifiIcon class="h-3 w-3 text-blue-500"></WifiIcon> </template>
+      </Card>
+      <!-- Airtime swap -->
+      <Card class="p-2">
+        <template #heading>
+          <h1 class="text-blue-500"><strong>Airtime Swap</strong></h1>
+        </template>
+
+        <template #data> <div class="text-green-500 rounded-full">...</div></template>
+        <template #date>
+          <div class="text-blue-500"></div>
+        </template>
+
+        <template #analitics> <BoltIcon class="h-3 w-3 text-blue-500"></BoltIcon> </template>
+        </Card>
+      <ButtomNav/>
+    </div>
+
   </div>
 </template>
 
-<script setup>
+<script>
 import {
   Disclosure,
   DisclosureButton,
@@ -148,15 +235,59 @@ import {
   MenuItem,
   MenuItems
 } from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon, } from '@heroicons/vue/24/outline'
-import { WifiIcon } from '@heroicons/vue/16/solid'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { WifiIcon, PhoneIcon,BoltIcon } from '@heroicons/vue/16/solid'
+import ButtomNav from "../components/ButtomNav.vue"
 import BalanceBar from '../components/BalanceBar.vue'
 import Card from '../components/Card.vue'
+import { defineComponent } from 'vue'
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false }
-]
+export default defineComponent({
+  name: 'Homeview',
+  components: {
+    ButtomNav,
+    BoltIcon,
+    PhoneIcon,
+    Bars3Icon,
+    BellIcon,
+    XMarkIcon,
+    BalanceBar,
+    Card,
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel,
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuItems,
+    WifiIcon
+  },
+  data() {
+    return {
+      date: 0,
+      day: null,
+      month: null,
+      navigation: [
+        { name: 'Dashboard', href: '#', current: true },
+        { name: 'Team', href: '#', current: false },
+        { name: 'Projects', href: '#', current: false },
+        { name: 'Calendar', href: '#', current: false }
+      ]
+    }
+  },
+
+  methods: {
+    getDate() {
+      const date = new Date()
+      const stringDate = date + ' '
+      const splitDate = stringDate.split(' ', 3)
+      this.date = splitDate[2]
+      this.day = splitDate[0]
+      this.month = splitDate[1]
+    }
+  },
+  mounted() {
+    this.getDate()
+  }
+})
 </script>
