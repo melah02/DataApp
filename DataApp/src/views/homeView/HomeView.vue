@@ -119,7 +119,7 @@
   </Disclosure>
 
   <div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-gray-800 h-[50vh]">
-    <p class="flex mx-6 py-8">Hi Melah,<br />Welcome to Marsh Data.</p>
+    <p class=" flex mx-6 py-8"><strong>Hi Melah,<br />Welcome to Marsh Data.</strong></p>
     <BalanceBar></BalanceBar>
   </div>
   <Card class="-my-16">
@@ -140,7 +140,7 @@
     </div>
     <div class="flex justify-center items-center ">
       <!-- Airtime -->
-      <Card class="p-2">
+      <Card class=" p-2">
         <template #heading>
           <h1 class="text-blue-500"><strong>Airtime</strong></h1>
         </template>
@@ -179,7 +179,7 @@
         <template #analitics> <BoltIcon class="h-3 w-3 text-blue-500"></BoltIcon> </template>
       </Card>
     </div>
-    <div class="flex justify-center items-center ">
+    <div class="flex justify-center items-center mb-16">
       <!-- Data pin -->
       <Card class="p-2">
         <template #heading>
@@ -191,7 +191,7 @@
           <div class="text-blue-500"></div>
         </template>
 
-        <template #analitics> <PhoneIcon class="h-3 w-3 text-blue-500"></PhoneIcon> </template>
+        <template #analitics> <LockOpenIcon class="h-3 w-3 text-blue-500"></LockOpenIcon> </template>
       </Card>
       <!-- Exam Pin -->
       <Card class="p-2">
@@ -204,7 +204,7 @@
           <div class="text-blue-500"></div>
         </template>
 
-        <template #analitics> <WifiIcon class="h-3 w-3 text-blue-500"></WifiIcon> </template>
+        <template #analitics> <ComputerDesktopIcon class="h-3 w-3 text-blue-500"></ComputerDesktopIcon> </template>
       </Card>
       <!-- Airtime swap -->
       <Card class="p-2">
@@ -217,7 +217,7 @@
           <div class="text-blue-500"></div>
         </template>
 
-        <template #analitics> <BoltIcon class="h-3 w-3 text-blue-500"></BoltIcon> </template>
+        <template #analitics> <ArrowPathRoundedSquareIcon class="h-3 w-3 text-blue-500"></ArrowPathRoundedSquareIcon> </template>
         </Card>
       <ButtomNav/>
     </div>
@@ -236,15 +236,18 @@ import {
   MenuItems
 } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { WifiIcon, PhoneIcon,BoltIcon } from '@heroicons/vue/16/solid'
-import ButtomNav from "../components/ButtomNav.vue"
-import BalanceBar from '../components/BalanceBar.vue'
-import Card from '../components/Card.vue'
+import { WifiIcon, PhoneIcon,BoltIcon,ComputerDesktopIcon, ArrowPathRoundedSquareIcon,LockOpenIcon } from '@heroicons/vue/16/solid'
+import ButtomNav from "../../components/ButtomNav.vue"
+import BalanceBar from '../../components/BalanceBar.vue'
+import Card from '../../components/Card.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Homeview',
   components: {
+    LockOpenIcon,
+    ArrowPathRoundedSquareIcon,
+    ComputerDesktopIcon,
     ButtomNav,
     BoltIcon,
     PhoneIcon,
