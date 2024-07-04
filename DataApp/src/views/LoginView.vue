@@ -119,7 +119,7 @@ export default defineComponent({
 
     signIn(e){
       e.preventDefault();
-      console.log('start')
+      console.log('starting')
       this.setAuth({Auth:true});
       this.$router.push({ name: "Home" });
       },
